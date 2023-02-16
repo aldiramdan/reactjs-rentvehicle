@@ -1,0 +1,18 @@
+.social-icon {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer {
+    font-size: 18px;
+}
+
+hr {
+    border-top: 2px solid gray;
+}
+
+footer li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}

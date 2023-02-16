@@ -1,0 +1,62 @@
+.carousel-item{
+    height: 850px;
+    margin-top: -120px;
+}
+
+.carousel-item .caro-title {
+   margin-bottom: 270px;
+   font-size: 75px;
+   text-align: center;
+}
+
+.popular-in-town {
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 56px;
+}
+
+.view-all {
+    text-decoration: none;
+    margin-top: 10px;
+    color: #fb8f1d;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.testimonials {
+    margin-bottom: 90px;
+}
+
+.star-rate {
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.comment {
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.testi-man {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 48px;
+}
+
+.testi-job {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 48px;
+}
+
+.reset {
+    text-decoration: none;
+    color: #000;
+}
