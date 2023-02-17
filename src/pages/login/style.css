@@ -1,0 +1,56 @@
+.login-bg {
+    background-image: url(../../img/bg-login.png);
+    background-size: cover;
+    padding-top: 107px;
+    padding-bottom: 125px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.25);
+}
+
+.login-form {
+    border-right: 2px white solid;
+    margin-right: 15px;
+}
+
+.login-tagline {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+.login-subtagline {
+    margin-top: 43px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.btn-signup {
+    width: 391px;
+    background-color: #393939;
+    color: #ffcd61;
+    border: none;
+    margin-bottom: 210px;
+}
+
+input {
+    margin-top: 34px;
+    opacity: 0.75;
+}
+
+.forgot-password {
+    margin-top: 25px;
+    margin-bottom: 49px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.btn-google {
+    margin-top: 34px;
+    background-color: white;
+    border: none;
+}
+
+.form-login {
+    height: 79px;
+}
