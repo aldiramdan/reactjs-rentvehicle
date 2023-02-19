@@ -1,0 +1,19 @@
+.navmenu {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.navmenu:hover {
+    font-weight: bold;
+    border-bottom: 3px solid #fb8f1d;
+}
+
+.navbtn {
+    width: 125px;
+}
+
+.btnlog {
+    margin-top: 20px;
+    font-weight: bold;
+}
