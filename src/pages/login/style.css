@@ -20,6 +20,7 @@
 .login-subtagline {
     margin-top: 43px;
     margin-bottom: 25px;
+    margin-left: 2px;
     font-size: 22px;
     font-weight: 700;
 }
@@ -35,6 +36,7 @@
 .forgot-password {
     margin-top: 25px;
     margin-bottom: 49px;
+    margin-left: 2px;
     color: white;
     font-weight: 700;
     font-size: 18px;

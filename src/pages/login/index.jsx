@@ -49,14 +49,14 @@ function Login() {
                                     />
                                 </form>
                                 <p className="forgot-password">Forgot password?</p>
-                                    <button className="btn btn-lg btn-warning w-100 fw-bold form-login">
-                                        Login
-                                    </button>
-                                <br />
-                                    <button className="btn btn-lg btn-warning w-100 fw-bold btn-google form-login">
-                                        <FcGoogle />{` `}
-                                        Login with Google
-                                    </button>
+                                <button className="btn btn-lg btn-warning w-100 fw-bold form-login">
+                                    Login
+                                </button>
+                                    <br />
+                                <button className="btn btn-lg btn-warning w-100 fw-bold btn-google form-login">
+                                    <FcGoogle />{` `}
+                                    Login with Google
+                                </button>
                             </div>
                         </div>
                     </div>
