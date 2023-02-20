@@ -32,11 +32,6 @@
     margin-bottom: 210px;
 }
 
-input {
-    margin-top: 34px;
-    opacity: 0.75;
-}
-
 .forgot-password {
     margin-top: 25px;
     margin-bottom: 49px;
@@ -53,4 +48,9 @@ input {
 
 .form-login {
     height: 79px;
+}
+
+input {
+    margin-top: 34px;
+    opacity: 0.65;
 }

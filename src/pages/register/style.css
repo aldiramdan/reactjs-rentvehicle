@@ -32,11 +32,6 @@
     margin-bottom: 210px;
 }
 
-input {
-    margin-top: 34px;
-    opacity: 0.75;
-}
-
 .forgot-password {
     margin-top: 25px;
     margin-bottom: 49px;
@@ -55,6 +50,7 @@ input {
     height: 79px;
 }
 
-.password {
-    padding-bottom: 27px;
+input {
+    margin-top: 34px;
+    opacity: 0.75;
 }

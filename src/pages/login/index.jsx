@@ -26,7 +26,7 @@ function Login() {
                                     </p>
                                     <Link to="/register">
                                         <button className="btn btn-lg btn-warning fw-bold btn-signup form-login">
-                                        Sign up
+                                            Sign up
                                         </button>
                                     </Link>
                                 </div>
@@ -49,15 +49,13 @@ function Login() {
                                     />
                                 </form>
                                 <p className="forgot-password">Forgot password?</p>
-                                    <button
-                                    className="btn btn-lg btn-warning w-100 fw-bold form-login"
-                                    >
-                                    Login
+                                    <button className="btn btn-lg btn-warning w-100 fw-bold form-login">
+                                        Login
                                     </button>
                                 <br />
                                     <button className="btn btn-lg btn-warning w-100 fw-bold btn-google form-login">
-                                    <FcGoogle />
-                                    Login with Google
+                                        <FcGoogle />{` `}
+                                        Login with Google
                                     </button>
                             </div>
                         </div>

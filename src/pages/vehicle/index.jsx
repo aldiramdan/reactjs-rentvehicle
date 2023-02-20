@@ -12,7 +12,7 @@ function Vehicle() {
     const [motorbike, setMotorbike] = useState([])
     const [bike, setBike] = useState([])
 
-	const getPopularVehicle = async () => {
+	const getListVehicle = async () => {
 		try {
 			const { data: popular } = await axios.get(
 			    `${process.env.REACT_APP_BASE_URL}vehicle/popular`
@@ -41,7 +41,7 @@ function Vehicle() {
 	}
 
     useEffect(() => {
-        getPopularVehicle()
+        getListVehicle()
     })
 
     return (

@@ -26,7 +26,7 @@ function Register() {
                                     </p>
                                     <Link to="/login">
                                         <button className="btn btn-lg btn-warning fw-bold btn-signup form-login">
-                                        Login
+                                            Login
                                         </button>
                                     </Link>
                                 </div>
@@ -60,7 +60,7 @@ function Register() {
                                 <br />
                                 <Link to="/">
                                     <button className="btn btn-lg btn-warning w-100 fw-bold btn-google form-login">
-                                        <FcGoogle />
+                                        <FcGoogle />{` `}
                                         Sign up with Google
                                     </button>
                                 </Link>
