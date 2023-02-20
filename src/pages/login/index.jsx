@@ -1,7 +1,7 @@
 import { React } from 'react'
-import Footer from '../../components/footer'
 import { FcGoogle } from 'react-icons/fc'
 import { Link } from 'react-router-dom'
+import Footer from '../../components/footer'
 
 import './style.css'
 

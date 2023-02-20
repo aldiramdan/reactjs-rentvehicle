@@ -1,5 +1,6 @@
 /* eslint-disable array-callback-return */
 import { React, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
 import Card from '../../components/card'
@@ -28,124 +29,124 @@ function Home() {
 		}
 	}
 
-  useEffect(() => {
-    getPopularVehicle()
-  })
+	useEffect(() => {
+		getPopularVehicle()
+	})
 
-  return (
-    <div className='App'>
-		<Navbar />
+	return (
+		<div className='App'>
+			<Navbar />
 
-		<main>
-			<section className="caro">
-				<div id="myCarousel" className="carousel slide" data-ride="carousel" >
-					<ol className="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-					</ol>
-					<div className="carousel-inner">
-						<div className="carousel-item active">
-							<img className="d-block w-100" src={slide_1} alt="Slide 1"></img>
-							<div class="carousel-caption d-none d-md-block">
-								<h5 className='caro-title'>LET'S EXPLORE AND TRAVEL</h5>
-								<p>Slide to see our new arrival</p>
+			<main>
+				<section className="caro">
+					<div id="myCarousel" className="carousel slide" data-ride="carousel" >
+						<ol className="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" className="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+						<div className="carousel-inner">
+							<div className="carousel-item active">
+								<img className="d-block w-100" src={slide_1} alt="Slide 1"></img>
+								<div class="carousel-caption d-none d-md-block">
+									<h5 className='caro-title'>LET'S EXPLORE AND TRAVEL</h5>
+									<p>Slide to see our new arrival</p>
+								</div>
+							</div>
+							<div className="carousel-item">
+								<img className="d-block w-100" src={slide_2} alt="Slide 2"></img>
+								<div class="carousel-caption d-none d-md-block">
+									<h5 className='caro-title'>LET'S EXPLORE AND TRAVEL</h5>
+									<p>Slide to see our new arrival</p>
+								</div>
+							</div>
+							<div className="carousel-item">
+								<img className="d-block w-100" src={slide_3} alt="Slide 3"></img>
+								<div class="carousel-caption d-none d-md-block">
+									<h5 className='caro-title'>LET'S EXPLORE AND TRAVEL</h5>
+									<p>Slide to see our new arrival</p>
+								</div>
 							</div>
 						</div>
-						<div className="carousel-item">
-							<img className="d-block w-100" src={slide_2} alt="Slide 2"></img>
-							<div class="carousel-caption d-none d-md-block">
-								<h5 className='caro-title'>LET'S EXPLORE AND TRAVEL</h5>
-								<p>Slide to see our new arrival</p>
+						<a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+							<span className="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span className="sr-only">Previous</span>
+						</a>
+						<a className="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+							<span className="carousel-control-next-icon" aria-hidden="true"></span>
+							<span className="sr-only">Next</span>
+						</a>
+					</div>
+				</section>
+
+				<section className="popular-in-town">
+					<div className="container">
+						<div className="row">
+							<div className="col-sm-6">
+								<h2 className="title">Popular in Town</h2>
+							</div>
+							<div className="col-sm-6">
+								<div className="d-flex justify-content-end">
+									<Link to="/vehicle" className="view-all">
+										<p className="text-end fw-bold">
+											{'View all '}
+											<b>{'>'}</b>
+										</p>
+									</Link>
+								</div>
 							</div>
 						</div>
-						<div className="carousel-item">
-							<img className="d-block w-100" src={slide_3} alt="Slide 3"></img>
-							<div class="carousel-caption d-none d-md-block">
-								<h5 className='caro-title'>LET'S EXPLORE AND TRAVEL</h5>
-								<p>Slide to see our new arrival</p>
-							</div>
+						<div className="row">
+							{popular.map((v, k) => {
+								if (k < 4) {
+									return (
+									<Card
+										id={v.vehicle_id}
+										picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
+										name={v.name}
+										location={v.location}
+									/>
+								)}
+							})}
 						</div>
 					</div>
-					<a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-						<span className="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span className="sr-only">Previous</span>
-					</a>
-					<a className="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-						<span className="carousel-control-next-icon" aria-hidden="true"></span>
-						<span className="sr-only">Next</span>
-					</a>
-				</div>
-			</section>
+				</section>
 
-			<section className="popular-in-town">
-				<div className="container">
-					<div className="row">
-						<div className="col-sm-6">
-							<h2 className="title">Popular in Town</h2>
-						</div>
-						<div className="col-sm-6">
-							<div className="d-flex justify-content-end">
-								<div className="view-all">
-									<p className="text-end fw-bold">
-										{'View all '}
-										<b>{'>'}</b>
+				<section className="testimonials">
+					<div className="container">
+						<div className="row">
+							<div className="col-12">
+								<h2 className="title">Testimonials</h2>
+							</div>
+								<div className="col-sm-6 mx-auto">
+									<div className="d-flex justify-content-start">
+										<img className="star-rate" src={star} alt="" />
+										<img className="star-rate" src={star} alt="" />
+										<img className="star-rate" src={star} alt="" />
+										<img className="star-rate" src={star} alt="" />
+										<img className="star-rate" src={star} alt="" />
+									</div>
+									<p className="comment">
+										”It was the right decision to rent vehicle here, I spent less
+										money and enjoy the trip. It was an amazing experience to have
+										a ride for wildlife trip!”
 									</p>
+									<p className="testi-man">Edward Newgate</p>
+									<p className="testi-job">Founder Circle</p>
 								</div>
-							 </div>
-						</div>
-					</div>
-					<div className="row">
-						{popular.map((v, k) => {
-							if (k < 4) {
-								return (
-								<Card
-									id={v.vehicle_id}
-									picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
-									name={v.name}
-									location={v.location}
-								/>
-							)}
-						})}
-					</div>
-				</div>
-			</section>
-
-			<section className="testimonials">
-				<div className="container">
-					<div className="row">
-						<div className="col-12">
-							<h2 className="title">Testimonials</h2>
-						</div>
-							<div className="col-sm-6 mx-auto">
-								<div className="d-flex justify-content-start">
-									<img className="star-rate" src={star} alt="" />
-									<img className="star-rate" src={star} alt="" />
-									<img className="star-rate" src={star} alt="" />
-									<img className="star-rate" src={star} alt="" />
-									<img className="star-rate" src={star} alt="" />
+							<div className="col-sm-6">
+								<div className="d-flex justify-content-end">
+									<img className="rounded-4" src={testimony} alt="" />
 								</div>
-								<p className="comment">
-									”It was the right decision to rent vehicle here, I spent less
-									money and enjoy the trip. It was an amazing experience to have
-									a ride for wildlife trip!”
-								</p>
-								<p className="testi-man">Edward Newgate</p>
-								<p className="testi-job">Founder Circle</p>
-							</div>
-						<div className="col-sm-6">
-							<div className="d-flex justify-content-end">
-								<img className="rounded-4" src={testimony} alt="" />
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-		</main>
+				</section>
+			</main>
 
-		<Footer />
-	</div>
-  )
+			<Footer />
+		</div>
+	)
 }
 
 export default Home

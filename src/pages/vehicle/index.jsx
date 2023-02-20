@@ -1,5 +1,6 @@
 /* eslint-disable array-callback-return */
 import { React, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
 import Card from '../../components/card'
@@ -56,12 +57,12 @@ function Vehicle() {
                             </div>
                             <div className="col-sm-6">
                                 <div className="d-flex justify-content-end">
-                                    <div className="view-all">
-                                        <p className="text-end fw-bold">
-                                            {'View all '}
-                                            <b>{'>'}</b>
-                                        </p>
-                                    </div>
+                                    <Link to="/vehicle" className="view-all">
+										<p className="text-end fw-bold">
+											{'View all '}
+											<b>{'>'}</b>
+										</p>
+									</Link>
                                 </div>
                             </div>
                         </div>
@@ -90,12 +91,12 @@ function Vehicle() {
                             </div>
                             <div className="col-sm-6">
                                 <div className="d-flex justify-content-end">
-                                    <div className="view-all">
-                                        <p className="text-end fw-bold">
-                                            {'View all '}
-                                            <b>{'>'}</b>
-                                        </p>
-                                    </div>
+                                    <Link to="/vehicle" className="view-all">
+										<p className="text-end fw-bold">
+											{'View all '}
+											<b>{'>'}</b>
+										</p>
+									</Link>
                                 </div>
                             </div>
                         </div>
@@ -124,12 +125,12 @@ function Vehicle() {
                             </div>
                             <div className="col-sm-6">
                                 <div className="d-flex justify-content-end">
-                                    <div className="view-all">
-                                        <p className="text-end fw-bold">
-                                            {'View all '}
-                                            <b>{'>'}</b>
-                                        </p>
-                                    </div>
+                                    <Link to="/vehicle" className="view-all">
+										<p className="text-end fw-bold">
+											{'View all '}
+											<b>{'>'}</b>
+										</p>
+									</Link>
                                 </div>
                             </div>
                         </div>
@@ -158,12 +159,12 @@ function Vehicle() {
                             </div>
                             <div className="col-sm-6">
                                 <div className="d-flex justify-content-end">
-                                    <div className="view-all">
-                                        <p className="text-end fw-bold">
-                                            {'View all '}
-                                            <b>{'>'}</b>
-                                        </p>
-                                    </div>
+                                    <Link to="/vehicle" className="view-all">
+										<p className="text-end fw-bold">
+											{'View all '}
+											<b>{'>'}</b>
+										</p>
+								    </Link>
                                 </div>
                             </div>
                         </div>
