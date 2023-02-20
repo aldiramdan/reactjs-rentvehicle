@@ -1,0 +1,18 @@
+.popular-in-town {
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 56px;
+}
+
+.view-all {
+    text-decoration: none;
+    margin-top: 10px;
+    color: #fb8f1d;
+    font-weight: 400;
+    font-size: 17px;
+}

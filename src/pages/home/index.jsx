@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import { React, useEffect, useState } from 'react'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
@@ -12,14 +13,16 @@ import axios from 'axios'
 import './style.css'
 
 function Home() {
-	const [vehicle, setVehicle] = useState([])
+	const [popular, setPopularVehicle] = useState([])
 
 	const getPopularVehicle = async () => {
 		try {
-			const { data } = await axios.get(
-			`http://localhost:3080/vehicle/popular`
+			const { data: popular } = await axios.get(
+				`${process.env.REACT_APP_BASE_URL}vehicle/popular`
 			)
-			setVehicle(data.data)
+			
+			setPopularVehicle(popular.data)
+
 		} catch (error) {
 			console.log(error)
 		}
@@ -93,12 +96,12 @@ function Home() {
 						</div>
 					</div>
 					<div className="row">
-						{vehicle.map((v, k) => {
+						{popular.map((v, k) => {
 							if (k < 4) {
 								return (
 								<Card
 									id={v.vehicle_id}
-									picture={`http://localhost:3080/`+v.picture}
+									picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
 									name={v.name}
 									location={v.location}
 								/>

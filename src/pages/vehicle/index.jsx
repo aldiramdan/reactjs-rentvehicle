@@ -6,14 +6,34 @@ import Card from '../../components/card'
 import axios from 'axios'
 
 function Vehicle() {
-	const [vehicle, setVehicle] = useState([])
+    const [popular, setPopularVehicle] = useState([])
+    const [cars, setCars] = useState([])
+    const [motorbike, setMotorbike] = useState([])
+    const [bike, setBike] = useState([])
 
 	const getPopularVehicle = async () => {
 		try {
-			const { data } = await axios.get(
-			`http://localhost:3080/vehicle/popular`
+			const { data: popular } = await axios.get(
+			    `${process.env.REACT_APP_BASE_URL}vehicle/popular`
 			)
-			setVehicle(data.data)
+
+            const { data: cars } = await axios.get(
+			    `${process.env.REACT_APP_BASE_URL}vehicle/search/?s=cars`
+			)
+
+            const { data: motorbike } = await axios.get(
+			    `${process.env.REACT_APP_BASE_URL}vehicle/search/?s=motorbike`
+			)
+
+            const { data: bike } = await axios.get(
+			    `${process.env.REACT_APP_BASE_URL}vehicle/search/?s=bike`
+			)
+
+			setPopularVehicle(popular.data)
+			setCars(cars.data)
+			setMotorbike(motorbike.data)
+			setBike(bike.data)
+            
 		} catch (error) {
 			console.log(error)
 		}
@@ -47,12 +67,12 @@ function Vehicle() {
                         </div>
 
                         <div className="row">
-                            {vehicle.map((v, k) => {
+                            {popular.map((v, k) => {
                                 if (k < 4) {
                                     return (
                                     <Card
                                         id={v.vehicle_id}
-                                        picture={`http://localhost:3080/`+v.picture}
+                                        picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
                                         name={v.name}
                                         location={v.location}
                                     />
@@ -81,12 +101,12 @@ function Vehicle() {
                         </div>
                         
                         <div className="row">
-                            {vehicle.map((v, k) => {
+                            {cars.map((v, k) => {
                                 if (k < 4) {
                                     return (
                                     <Card
                                         id={v.vehicle_id}
-                                        picture={`http://localhost:3080/`+v.picture}
+                                        picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
                                         name={v.name}
                                         location={v.location}
                                     />
@@ -100,7 +120,7 @@ function Vehicle() {
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-6">
-                                <h2 className="title">Motocycle</h2>
+                                <h2 className="title">Motorbike</h2>
                             </div>
                             <div className="col-sm-6">
                                 <div className="d-flex justify-content-end">
@@ -115,12 +135,12 @@ function Vehicle() {
                         </div>
 
                         <div className="row">
-                            {vehicle.map((v, k) => {
+                            {motorbike.map((v, k) => {
                                 if (k < 4) {
                                     return (
                                     <Card
                                         id={v.vehicle_id}
-                                        picture={`http://localhost:3080/`+v.picture}
+                                        picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
                                         name={v.name}
                                         location={v.location}
                                     />
@@ -149,12 +169,12 @@ function Vehicle() {
                         </div>
 
                         <div className="row">
-                            {vehicle.map((v, k) => {
+                            {bike.map((v, k) => {
                                 if (k < 4) {
                                     return (
                                     <Card
                                         id={v.vehicle_id}
-                                        picture={`http://localhost:3080/`+v.picture}
+                                        picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
                                         name={v.name}
                                         location={v.location}
                                     />

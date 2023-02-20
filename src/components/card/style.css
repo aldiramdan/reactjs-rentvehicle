@@ -3,13 +3,19 @@
 }
 
 .card-content {
-    padding: 5px 0 0 10px;
+    font-size: 14px;
+    padding: 10px 0 0 10px;
     height: 70px;
-    width: 65%;
+    width: 55%;
     background-color: white;
     position: relative;
     bottom: 100px;
     border-radius: 0 10px 0 0;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 17px;
 }
 
 .card-img-top {
