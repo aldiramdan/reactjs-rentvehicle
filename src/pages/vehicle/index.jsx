@@ -27,141 +27,143 @@ function Vehicle() {
         <div className="App">
             <Navbar />
 
-            <section className="popular-in-town">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <h2 className="title">Popular in Town</h2>
-                        </div>
-                        <div className="col-sm-6">
-                            <div className="d-flex justify-content-end">
-								<div className="view-all">
-									<p className="text-end fw-bold">
-										{'View all '}
-										<b>{'>'}</b>
-									</p>
-								</div>
-							 </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        {vehicle.map((v, k) => {
-							if (k < 4) {
-								return (
-								<Card
-									id={v.vehicle_id}
-									picture={`http://localhost:3080/`+v.picture}
-									name={v.name}
-									location={v.location}
-								/>
-							)}
-						})}
-                    </div>
-                </div>
-            </section>
-
-            <section className="popular-in-town">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <h2 className="title">Cars</h2>
-                        </div>
-                        <div className="col-sm-6">
-                            <div className="d-flex justify-content-end">
-                                <div className="view-all">
-                                    <p className="text-end fw-bold">
-                                        {'View all '}
-                                        <b>{'>'}</b>
-                                    </p>
+            <main>
+                <section className="popular-in-town">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <h2 className="title">Popular in Town</h2>
+                            </div>
+                            <div className="col-sm-6">
+                                <div className="d-flex justify-content-end">
+                                    <div className="view-all">
+                                        <p className="text-end fw-bold">
+                                            {'View all '}
+                                            <b>{'>'}</b>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div className="row">
-                        {vehicle.map((v, k) => {
-                            if (k < 4) {
-                                return (
-                                <Card
-                                    id={v.vehicle_id}
-                                    picture={`http://localhost:3080/`+v.picture}
-                                    name={v.name}
-                                    location={v.location}
-                                />
-                            )}
-                        })}
-                    </div>
-                </div>
-            </section>
 
-            <section className="popular-in-town">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <h2 className="title">Motocycle</h2>
+                        <div className="row">
+                            {vehicle.map((v, k) => {
+                                if (k < 4) {
+                                    return (
+                                    <Card
+                                        id={v.vehicle_id}
+                                        picture={`http://localhost:3080/`+v.picture}
+                                        name={v.name}
+                                        location={v.location}
+                                    />
+                                )}
+                            })}
                         </div>
-                        <div className="col-sm-6">
-                            <div className="d-flex justify-content-end">
-                                <div className="view-all">
-                                    <p className="text-end fw-bold">
-                                        {'View all '}
-                                        <b>{'>'}</b>
-                                    </p>
+                    </div>
+                </section>
+
+                <section className="popular-in-town">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <h2 className="title">Cars</h2>
+                            </div>
+                            <div className="col-sm-6">
+                                <div className="d-flex justify-content-end">
+                                    <div className="view-all">
+                                        <p className="text-end fw-bold">
+                                            {'View all '}
+                                            <b>{'>'}</b>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="row">
-                        {vehicle.map((v, k) => {
-                            if (k < 4) {
-                                return (
-                                <Card
-                                    id={v.vehicle_id}
-                                    picture={`http://localhost:3080/`+v.picture}
-                                    name={v.name}
-                                    location={v.location}
-                                />
-                            )}
-                        })}
-                    </div>
-                </div>
-            </section>
-
-            <section className="popular-in-town">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <h2 className="title">Bike</h2>
+                        
+                        <div className="row">
+                            {vehicle.map((v, k) => {
+                                if (k < 4) {
+                                    return (
+                                    <Card
+                                        id={v.vehicle_id}
+                                        picture={`http://localhost:3080/`+v.picture}
+                                        name={v.name}
+                                        location={v.location}
+                                    />
+                                )}
+                            })}
                         </div>
-                        <div className="col-sm-6">
-                            <div className="d-flex justify-content-end">
-                                <div className="view-all">
-                                    <p className="text-end fw-bold">
-                                        {'View all '}
-                                        <b>{'>'}</b>
-                                    </p>
+                    </div>
+                </section>
+
+                <section className="popular-in-town">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <h2 className="title">Motocycle</h2>
+                            </div>
+                            <div className="col-sm-6">
+                                <div className="d-flex justify-content-end">
+                                    <div className="view-all">
+                                        <p className="text-end fw-bold">
+                                            {'View all '}
+                                            <b>{'>'}</b>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="row">
-                        {vehicle.map((v, k) => {
-                            if (k < 4) {
-                                return (
-                                <Card
-                                    id={v.vehicle_id}
-                                    picture={`http://localhost:3080/`+v.picture}
-                                    name={v.name}
-                                    location={v.location}
-                                />
-                            )}
-                        })}
+                        <div className="row">
+                            {vehicle.map((v, k) => {
+                                if (k < 4) {
+                                    return (
+                                    <Card
+                                        id={v.vehicle_id}
+                                        picture={`http://localhost:3080/`+v.picture}
+                                        name={v.name}
+                                        location={v.location}
+                                    />
+                                )}
+                            })}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+
+                <section className="popular-in-town">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <h2 className="title">Bike</h2>
+                            </div>
+                            <div className="col-sm-6">
+                                <div className="d-flex justify-content-end">
+                                    <div className="view-all">
+                                        <p className="text-end fw-bold">
+                                            {'View all '}
+                                            <b>{'>'}</b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            {vehicle.map((v, k) => {
+                                if (k < 4) {
+                                    return (
+                                    <Card
+                                        id={v.vehicle_id}
+                                        picture={`http://localhost:3080/`+v.picture}
+                                        name={v.name}
+                                        location={v.location}
+                                    />
+                                )}
+                            })}
+                        </div>
+                    </div>
+                </section>
+            </main>
 
             <Footer />
         </div>

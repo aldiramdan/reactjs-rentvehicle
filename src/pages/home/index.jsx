@@ -111,30 +111,30 @@ function Home() {
 			<section className="testimonials">
 				<div className="container">
 					<div className="row">
-					<div className="col-12">
-						<h2 className="title">Testimonials</h2>
-					</div>
-					<div className="col-sm-6 mx-auto">
-						<div className="d-flex justify-content-start">
-							<img className="star-rate" src={star} alt="" />
-							<img className="star-rate" src={star} alt="" />
-							<img className="star-rate" src={star} alt="" />
-							<img className="star-rate" src={star} alt="" />
-							<img className="star-rate" src={star} alt="" />
+						<div className="col-12">
+							<h2 className="title">Testimonials</h2>
 						</div>
-						<p className="comment">
-							”It was the right decision to rent vehicle here, I spent less
-							money and enjoy the trip. It was an amazing experience to have
-							a ride for wildlife trip!”
-						</p>
-						<p className="testi-man">Edward Newgate</p>
-						<p className="testi-job">Founder Circle</p>
-					</div>
-					<div className="col-sm-6">
-						<div className="d-flex justify-content-end">
-							<img className="rounded-4" src={testimony} alt="" />
+							<div className="col-sm-6 mx-auto">
+								<div className="d-flex justify-content-start">
+									<img className="star-rate" src={star} alt="" />
+									<img className="star-rate" src={star} alt="" />
+									<img className="star-rate" src={star} alt="" />
+									<img className="star-rate" src={star} alt="" />
+									<img className="star-rate" src={star} alt="" />
+								</div>
+								<p className="comment">
+									”It was the right decision to rent vehicle here, I spent less
+									money and enjoy the trip. It was an amazing experience to have
+									a ride for wildlife trip!”
+								</p>
+								<p className="testi-man">Edward Newgate</p>
+								<p className="testi-job">Founder Circle</p>
+							</div>
+						<div className="col-sm-6">
+							<div className="d-flex justify-content-end">
+								<img className="rounded-4" src={testimony} alt="" />
+							</div>
 						</div>
-					</div>
 					</div>
 				</div>
 			</section>
