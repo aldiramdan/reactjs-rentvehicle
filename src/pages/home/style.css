@@ -1,12 +1,11 @@
 .carousel-item{
     height: 850px;
-    margin-top: -120px;
 }
 
 .carousel-item .caro-title {
-   margin-bottom: 270px;
-   font-size: 75px;
-   text-align: center;
+    margin-bottom: 270px;
+    font-size: 75px;
+    text-align: center;
 }
 
 .popular-in-town {
@@ -54,9 +53,4 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 48px;
-}
-
-.reset {
-    text-decoration: none;
-    color: #000;
 }

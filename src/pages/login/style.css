@@ -20,6 +20,7 @@
 .login-subtagline {
     margin-top: 43px;
     margin-bottom: 25px;
+    margin-left: 2px;
     font-size: 22px;
     font-weight: 700;
 }
@@ -32,14 +33,10 @@
     margin-bottom: 210px;
 }
 
-input {
-    margin-top: 34px;
-    opacity: 0.75;
-}
-
 .forgot-password {
     margin-top: 25px;
     margin-bottom: 49px;
+    margin-left: 2px;
     color: white;
     font-weight: 700;
     font-size: 18px;
@@ -53,4 +50,9 @@ input {
 
 .form-login {
     height: 79px;
+}
+
+input {
+    margin-top: 34px;
+    opacity: 0.65;
 }

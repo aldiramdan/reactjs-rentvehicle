@@ -1,11 +1,11 @@
 import React from 'react'
 import logo from '../../img/logo.png'
 import {
-  FaTwitter,
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaYoutube
+    FaTwitter,
+    FaFacebookF,
+    FaInstagram,
+    FaLinkedinIn,
+    FaYoutube
 } from 'react-icons/fa'
 
 import './style.css'
@@ -38,8 +38,8 @@ function Footer() {
                     <div className="col-md">
                         <ul>
                             <li>
-                            <b>Vehicle</b>
-                                </li>
+                                <b>Vehicle</b>
+                            </li>
                             <li>Bike</li>
                             <li>Cars</li>
                             <li>Motorbike</li>

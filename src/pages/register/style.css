@@ -32,19 +32,6 @@
     margin-bottom: 210px;
 }
 
-input {
-    margin-top: 34px;
-    opacity: 0.75;
-}
-
-.forgot-password {
-    margin-top: 25px;
-    margin-bottom: 49px;
-    color: white;
-    font-weight: 700;
-    font-size: 18px;
-}
-
 .btn-google {
     margin-top: 34px;
     background-color: white;
@@ -53,8 +40,4 @@ input {
 
 .form-login {
     height: 79px;
-}
-
-.password {
-    padding-bottom: 27px;
 }
