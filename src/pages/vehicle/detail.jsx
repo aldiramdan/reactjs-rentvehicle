@@ -72,37 +72,6 @@ function Details() {
                                 </p>
                             </div>
                         </div>
-                        {/* <div className="row">
-                            <div className="col-lg-6">
-                                <img className="detail-image" src={`https://lapaskotabumi.id/wp-content/uploads/2016/06/placeholder_1080_720.png`} alt="uihef" />
-                            </div>
-                            <div className="col-lg-6">
-                                <p className="detail-name">
-                                    Lamborghini
-                                </p>
-                                <p className="detail-location">
-                                    South Jakarta
-                                </p>
-                                <p className="detail-status">
-                                    Availbe
-                                </p>
-                                <p className="detail-desc">
-                                    desc
-                                </p>
-                                <p className="detail-etc">
-                                    Capacity : 2 person
-                                </p>
-                                <p className="detail-etc">
-                                    Type : Cars
-                                </p>
-                                <p className="detail-etc">
-                                    Reservation before 2PM
-                                </p>
-                                <p className="detail-price">
-                                    Rp.78.0000/day
-                                </p>
-                            </div>
-                        </div> */}
                     <div className="row mt-5 mb-5">
                         <div className="col-md-4">
                             <button className="btn btn-lg btn-warning w-100 btn-detail fw-bold form-login">
