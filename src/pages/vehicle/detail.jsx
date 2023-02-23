@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { React, useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { FaHeart, FaAngleLeft } from 'react-icons/fa'
 import Navbar from '../../components/navbar'
@@ -7,8 +7,8 @@ import axios from 'axios'
 
 import './style.css'
 
-function Details() {
-    const [vehicle, setVehicle] = useState([])
+function Detail() {
+    const [vehicle, setVehicle] = useState(null)
     const params = useParams()
 
     const getVehicle = async () => {
@@ -16,7 +16,7 @@ function Details() {
 			const { data: vehicle } = await axios.get(
 				`${process.env.REACT_APP_BASE_URL}vehicle/${params.id}`
 			)
-			
+
 			setVehicle(vehicle.data)
                 
 		} catch (error) {
@@ -27,6 +27,10 @@ function Details() {
     useEffect(() => {
         getVehicle()
     }, [])
+
+    if (!vehicle) {
+        return <div>Loading...</div>
+    }
 
     return (
         <div className="App">
@@ -98,4 +102,4 @@ function Details() {
     )
 }
 
-export default Details
+export default Detail
