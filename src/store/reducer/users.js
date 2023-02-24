@@ -23,7 +23,7 @@ const userSlice = createSlice({
                 data: {}
             }
         },
-        SetData(state, actions){
+        regUsers(state, actions){
             return {
                 ...state,
                 data: actions.payload
@@ -32,5 +32,5 @@ const userSlice = createSlice({
     }
 })
 
-export const { login, logout, SetData } = userSlice.actions
+export const { login, logout, regUsers } = userSlice.actions
 export default userSlice.reducer
