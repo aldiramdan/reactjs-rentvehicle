@@ -25,12 +25,12 @@
     font-weight: 700;
 }
 
-.btn-signup {
+.btn-signup-login {
     width: 391px;
     background-color: #393939;
     color: #ffcd61;
     border: none;
-    margin-bottom: 210px;
+    margin-bottom: 215px;
 }
 
 .forgot-password {
