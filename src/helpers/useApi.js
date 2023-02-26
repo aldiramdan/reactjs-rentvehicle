@@ -1,6 +1,6 @@
-import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import axios from 'axios'
 
 function useApi (urls = '') {
     const { token } = useSelector((state) => state.users)
