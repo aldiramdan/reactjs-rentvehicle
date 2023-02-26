@@ -14,6 +14,30 @@
 }
 
 .btnlog {
-    margin-top: 20px;
     font-weight: bold;
+}
+
+.profile-pic{
+    width: 2.8rem;
+    height: 2.8rem;
+    object-fit: cover;
+}
+
+.dropdown-item{
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    color: #fb8f1d;
+}
+
+.btn-transparent {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.btn-transparent:hover,.btn-transparent:focus {
+    background-color: transparent;
+    color: white;
 }
