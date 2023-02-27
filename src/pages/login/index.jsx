@@ -3,7 +3,7 @@ import { FcGoogle } from 'react-icons/fc'
 import { FaAngleLeft } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { login } from '../../store/reducer/users'
+import { login } from '../../stores/reducer/users'
 import useApi from '../../helpers/useApi'
 import Footer from '../../components/footer'
 
@@ -28,6 +28,7 @@ function Login() {
 
     const onChangeInput = (e) => {
         e.preventDefault()
+        
         const data = { ...Users }
         data[e.target.name] = e.target.value
         setUsers(data)
