@@ -1,10 +1,12 @@
-/* eslint-disable array-callback-return */
 import { React, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
+import Loading from '../../components/loading'
 import Card from '../../components/card'
 import axios from 'axios'
+
+import './style.css'
 
 function Vehicle() {
     const [popular, setPopularVehicle] = useState([])
@@ -42,7 +44,11 @@ function Vehicle() {
 
     useEffect(() => {
         getListVehicle()
-    })
+    }, [])
+
+    if (!popular || !cars || !motorbike || !bike) {
+        return <Loading />
+    }
 
     return (
         <div className="App">
@@ -57,7 +63,7 @@ function Vehicle() {
                             </div>
                             <div className="col-sm-6">
                                 <div className="d-flex justify-content-end">
-                                    <Link to="/vehicle" className="view-all">
+                                    <Link to="/vehicle/category/all" className="view-all">
 										<p className="text-end fw-bold">
 											{'View all '}
 											<b>{'>'}</b>
@@ -72,10 +78,11 @@ function Vehicle() {
                                 if (k < 4) {
                                     return (
                                     <Card
-                                        id={v.vehicle_id}
+                                        id={v.id}
                                         picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
                                         name={v.name}
                                         location={v.location}
+                                        rating={v.rating}
                                     />
                                 )}
                             })}
@@ -91,7 +98,7 @@ function Vehicle() {
                             </div>
                             <div className="col-sm-6">
                                 <div className="d-flex justify-content-end">
-                                    <Link to="/vehicle" className="view-all">
+                                    <Link to="/vehicle/category/Cars" className="view-all">
 										<p className="text-end fw-bold">
 											{'View all '}
 											<b>{'>'}</b>
@@ -106,10 +113,11 @@ function Vehicle() {
                                 if (k < 4) {
                                     return (
                                     <Card
-                                        id={v.vehicle_id}
+                                        id={v.id}
                                         picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
                                         name={v.name}
                                         location={v.location}
+                                        rating={v.rating}
                                     />
                                 )}
                             })}
@@ -125,7 +133,7 @@ function Vehicle() {
                             </div>
                             <div className="col-sm-6">
                                 <div className="d-flex justify-content-end">
-                                    <Link to="/vehicle" className="view-all">
+                                    <Link to="/vehicle/category/Motorbike" className="view-all">
 										<p className="text-end fw-bold">
 											{'View all '}
 											<b>{'>'}</b>
@@ -140,10 +148,11 @@ function Vehicle() {
                                 if (k < 4) {
                                     return (
                                     <Card
-                                        id={v.vehicle_id}
+                                        id={v.id}
                                         picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
                                         name={v.name}
                                         location={v.location}
+                                        rating={v.rating}
                                     />
                                 )}
                             })}
@@ -159,7 +168,7 @@ function Vehicle() {
                             </div>
                             <div className="col-sm-6">
                                 <div className="d-flex justify-content-end">
-                                    <Link to="/vehicle" className="view-all">
+                                    <Link to="/vehicle/category/Bike" className="view-all">
 										<p className="text-end fw-bold">
 											{'View all '}
 											<b>{'>'}</b>
@@ -174,10 +183,11 @@ function Vehicle() {
                                 if (k < 4) {
                                     return (
                                     <Card
-                                        id={v.vehicle_id}
+                                        id={v.id}
                                         picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
                                         name={v.name}
                                         location={v.location}
+                                        rating={v.rating}
                                     />
                                 )}
                             })}

@@ -1,8 +1,10 @@
 import { React, useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { FaHeart, FaAngleLeft } from 'react-icons/fa'
+import CurrencyFormat from "react-currency-format"
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
+import Loading from '../../components/loading'
 import axios from 'axios'
 
 import './style.css'
@@ -29,7 +31,7 @@ function Detail() {
     }, [])
 
     if (!vehicle) {
-        return <div>Loading...</div>
+        return <Loading />
     }
 
     return (
@@ -43,13 +45,13 @@ function Detail() {
                         <Link to="/vehicle" className='left-link'>
 							<FaAngleLeft className="left-icon"/> 
 						</Link>
-                        <h2 className="title">Details</h2>
+                        <h2 className="title">Detail</h2>
                     </div>
                         <div className="row">
                             <div className="col-lg-6">
                                 <img className="detail-image" src={`${process.env.REACT_APP_BASE_URL}`+vehicle.picture} alt="uihef" />
                             </div>
-                            <div className="col-lg-6">
+                            <div className="col-lg-6 justify-content-end">
                                 <p className="detail-name">
                                     {vehicle.name}
                                 </p>
@@ -72,7 +74,14 @@ function Detail() {
                                     Reservation before 2PM
                                 </p>
                                 <p className="detail-price">
-                                    Rp.{vehicle.price}/day
+                                     <CurrencyFormat
+                                        value={vehicle.price}
+                                        displayType={"text"}
+                                        thousandSeparator={"."}
+                                        decimalSeparator={","}
+                                        prefix={"Rp "}
+                                        />
+                                        /day
                                 </p>
                             </div>
                         </div>
@@ -83,9 +92,11 @@ function Detail() {
                             </button>
                         </div>
                         <div className="col-md-4">
-                            <button className="btn btn-lg btn-warning w-100 btn-reser fw-bold form-login">
-                                Reservation
-                            </button>
+                            <Link to={`/reservation/${vehicle.id}`}>
+                                <button className="btn btn-lg btn-warning w-100 btn-reser fw-bold form-login">
+                                    Reservation
+                                </button>
+                            </Link>
                         </div>
                         <div className="col-md-4">
                             <button className="btn btn-lg btn-warning w-100 btn-detail fw-bold form-login">
