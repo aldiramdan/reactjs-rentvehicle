@@ -3,7 +3,7 @@ import { FcGoogle } from 'react-icons/fc'
 import { FaAngleLeft } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { regUsers } from '../../store/reducer/users'
+import { regUsers } from '../../stores/reducer/users'
 import useApi from '../../helpers/useApi'
 import Footer from '../../components/footer'
 
