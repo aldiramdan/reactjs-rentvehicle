@@ -11,6 +11,7 @@ import './style.css'
 
 function Register() {
     const [Users, setUsers] = useState({
+        name: '',
         username: '',
         email: '',
         password: '',
@@ -29,7 +30,7 @@ function Register() {
     }, [isAuth])
 
     const onChangeInput = (e) => {
-        encodeURI.preventDefault()
+        e.preventDefault()
 
         const data = { ...Users }
         data[e.target.name] = e.target.value
@@ -42,7 +43,7 @@ function Register() {
             formData.append(`${key}`, Users[key])
         }
 
-        if (Users.name == '' || Users.username == '' || Users.email == '' || Users.password == '') {
+        if (Users.name === '' || Users.username === '' || Users.email === '' || Users.password === '') {
             alert('Please fill all fields')
         } else if (Users.username != Users.username.toLowerCase()) {
             alert('username must be lowercase')
