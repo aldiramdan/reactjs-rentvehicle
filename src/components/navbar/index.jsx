@@ -7,7 +7,7 @@ import logo from '../../img/logo.png'
 
 import './style.css'
 
-function Navbar(props) {
+function Navbar() {
     const dispatch = useDispatch()
     const { isAuth } = useSelector((state) => state.users)
     const [user, setUser] = useState({})
@@ -31,8 +31,6 @@ function Navbar(props) {
     useEffect(() => {
         getUser()
     }, [])
-
-    console.log(user);
 
     return (
         <div className="container-fluid">
