@@ -28,10 +28,11 @@ function Register() {
         }
     }, [isAuth])
 
-    const onChangeInput = (event) => {
-        event.preventDefault()
+    const onChangeInput = (e) => {
+        encodeURI.preventDefault()
+
         const data = { ...Users }
-        data[event.target.name] = event.target.value
+        data[e.target.name] = e.target.value
         setUsers(data)
     }
 

@@ -9,7 +9,7 @@ import axios from 'axios'
 
 import './style.css'
 
-function Detail() {
+function Reservation() {
     const [vehicle, setVehicle] = useState('')
     const params = useParams()
 
@@ -45,7 +45,7 @@ function Detail() {
                         <Link to="/vehicle" className='left-link'>
 							<FaAngleLeft className="left-icon"/> 
 						</Link>
-                        <h2 className="title">Detail</h2>
+                        <h2 className="title">Reservation</h2>
                     </div>
                         <div className="row">
                             <div className="col-lg-6">
@@ -87,20 +87,38 @@ function Detail() {
                         </div>
                     <div className="row mt-5 mb-5">
                         <div className="col-md-4">
-                            <button className="btn btn-lg btn-warning w-100 btn-detail fw-bold form-login">
-                                Chat Admin
+                            <p className='title'>
+                                Reservation Date :
+                            </p>
+                        </div>
+                        <div className="col-md-4">
+                            <input 
+                                type="date" 
+                                name="start_date" 
+                                className="form-control form-control-lg date-reser" 
+                                placeholder="Start Date"
+                                required />
+                        </div>
+                        <div className="col-md-4">
+                            <input 
+                                type="date" 
+                                name="end_date" 
+                                className="form-control form-control-lg date-reser" 
+                                placeholder="End Date"
+                                required />
+                        </div>
+                    </div>
+                    <div className="row mt-5 mb-5">
+                        <div className="col-lg">
+                            <button className="btn btn-lg btn-warning w-100 btn-reser fw-bold form-login">
+                                Total
                             </button>
                         </div>
-                        <div className="col-md-4">
-                            <Link to={`/reservation/${vehicle.id}`}>
-                                <button className="btn btn-lg btn-warning w-100 btn-reser fw-bold form-login">
-                                    Reservation
-                                </button>
-                            </Link>
-                        </div>
-                        <div className="col-md-4">
-                            <button className="btn btn-lg btn-warning w-100 btn-detail fw-bold form-login">
-                                 <FaHeart className="heart-icon"/> Like
+                    </div>
+                    <div className="row mt-5 mb-5">
+                        <div className="col-lg">
+                            <button className="btn btn-lg btn-warning w-100 btn-reser fw-bold form-login">
+                                Go to Payment
                             </button>
                         </div>
                     </div>
@@ -113,4 +131,4 @@ function Detail() {
     )
 }
 
-export default Detail
+export default Reservation

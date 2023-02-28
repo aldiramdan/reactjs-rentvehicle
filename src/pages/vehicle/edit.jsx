@@ -41,8 +41,9 @@ function EditVehicle() {
     const updateData = () => {
         const formData = new FormData()
         for (const key in data) {
-        formData.append(`${key}`, data[key])
+            formData.append(`${key}`, data[key])
         }
+
         api.request({
             method: 'PUT',
             url: '/vehicle/' + params.id,
@@ -115,7 +116,7 @@ function EditVehicle() {
                                     name="name"
                                     type="text"
                                     placeholder="Name"
-                                    value={vehicle.name}
+                                    defaultValue ={vehicle.name}
                                     onChange={onChangeInput}
                                     required>
                                 </input>
@@ -124,7 +125,7 @@ function EditVehicle() {
                                     name="location"
                                     type="text"
                                     placeholder="Location"
-                                    value={vehicle.location}
+                                    defaultValue ={vehicle.location}
                                     onChange={onChangeInput}
                                     required>
                                 </input>
@@ -133,7 +134,7 @@ function EditVehicle() {
                                     name="description"
                                     type="text"
                                     placeholder="Description"
-                                    value={vehicle.description}
+                                    defaultValue ={vehicle.description}
                                     onChange={onChangeInput}
                                     required>                       
                                 </input>
@@ -142,7 +143,7 @@ function EditVehicle() {
                                     name="price"
                                     type="number"
                                     placeholder="Price"
-                                    value={vehicle.price}
+                                    defaultValue ={vehicle.price}
                                     onChange={onChangeInput}
                                     required>
                                 </input>
@@ -151,7 +152,7 @@ function EditVehicle() {
                                     className="form-control form-control-lg"
                                     name="status"
                                     type="text"
-                                    value={vehicle.status}
+                                    defaultValue ={vehicle.status}
                                     onChange={onChangeInput}>
                                         <option disabled>Select Status</option>
                                         <option value="Available">Available</option>
@@ -162,7 +163,7 @@ function EditVehicle() {
                                     name="stock"
                                     type="number"
                                     placeholder="Stock"
-                                    value={vehicle.stock}
+                                    defaultValue ={vehicle.stock}
                                     onChange={onChangeInput}
                                     required>
                                 </input>
@@ -170,7 +171,7 @@ function EditVehicle() {
                                 <select
                                     className="form-control form-control-lg"
                                     name="category_id"
-                                    value={vehicle.category_id}
+                                    defaultValue ={vehicle.category_id}
                                     onChange={onChangeInput}>
                                         <option selected>Select Category</option>
                                         {category.map((v, k) => (
