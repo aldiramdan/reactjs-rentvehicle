@@ -19,12 +19,23 @@
     margin-bottom: 56px;
 }
 
+.title-dashboard {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
 .view-all {
     text-decoration: none;
     margin-top: 10px;
     color: #fb8f1d;
     font-weight: 400;
     font-size: 17px;
+}
+
+.view-all:hover {
+    text-decoration: none;
+    color: black;
 }
 
 .testimonials {

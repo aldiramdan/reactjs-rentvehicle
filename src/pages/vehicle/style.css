@@ -1,18 +1,87 @@
-.popular-in-town {
-    margin-top: 80px;
-    margin-bottom: 10px;
+.detail-name {
+    font-weight: 900;
+    font-size: 48px;
+    margin-left: 65px;
 }
 
-.title {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 56px;
-}
-
-.view-all {
-    text-decoration: none;
-    margin-top: 10px;
-    color: #fb8f1d;
+.detail-location {
     font-weight: 400;
-    font-size: 17px;
+    font-size: 36px;
+    margin-top: -25px;
+    margin-left: 65px;
+}
+
+.detail-status {
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 65px;
+    color: #087e0d;
+}
+
+.detail-desc {
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: 65px;
+    color: #9b0a0a;
+}
+
+.detail-price {
+    font-weight: 900;
+    font-size: 36px;
+    margin-left: 65px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.detail-etc {
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: 65px;
+}
+
+.detail-image {
+    margin-top: 10px;
+    width: 37rem;
+    height: 28rem;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.detail-image:hover {
+    transform: scale(1.1);
+}
+
+.btn-detail {
+    background-color: #393939;
+    color: #ffcd61;
+    border: none;
+    font-size: 24px;
+}
+
+.btn-reser {
+    font-size: 24px;
+}
+
+.left-icon {
+    width: 52px;
+    height: 45px;
+    color: #393939;
+}
+
+.left-icon:hover {
+    color: orange;
+}
+
+.heart-icon{
+    width: 52px;
+    height: 45px;
+}
+
+.heart-icon:hover {
+    color: #9b0a0a;
+}
+
+.custom-file{
+    margin-top: 20px;
 }

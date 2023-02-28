@@ -1,0 +1,17 @@
+.date-reser {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    width: 200px;
+    height: 60px;
+    margin-left: 135px;
+    margin-top: -0.5rem;
+}

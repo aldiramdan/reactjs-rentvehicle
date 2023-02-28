@@ -1,8 +1,8 @@
-/* eslint-disable array-callback-return */
 import { React, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
+import Loading from '../../components/loading'
 import Card from '../../components/card'
 import star from '../../img/star.png'
 import slide_1 from '../../img/cover-home-slide.png'
@@ -31,7 +31,11 @@ function Home() {
 
 	useEffect(() => {
 		getPopularVehicle()
-	})
+	}, [])
+
+	if (!popular) {
+        return <Loading />
+    }
 
 	return (
 		<div className='App'>
@@ -48,21 +52,21 @@ function Home() {
 						<div className="carousel-inner">
 							<div className="carousel-item active">
 								<img className="d-block w-100" src={slide_1} alt="Slide 1"></img>
-								<div class="carousel-caption d-none d-md-block">
+								<div className="carousel-caption d-none d-md-block">
 									<h5 className='caro-title'>LET'S EXPLORE AND TRAVEL</h5>
 									<p>Slide to see our new arrival</p>
 								</div>
 							</div>
 							<div className="carousel-item">
 								<img className="d-block w-100" src={slide_2} alt="Slide 2"></img>
-								<div class="carousel-caption d-none d-md-block">
+								<div className="carousel-caption d-none d-md-block">
 									<h5 className='caro-title'>LET'S EXPLORE AND TRAVEL</h5>
 									<p>Slide to see our new arrival</p>
 								</div>
 							</div>
 							<div className="carousel-item">
 								<img className="d-block w-100" src={slide_3} alt="Slide 3"></img>
-								<div class="carousel-caption d-none d-md-block">
+								<div className="carousel-caption d-none d-md-block">
 									<h5 className='caro-title'>LET'S EXPLORE AND TRAVEL</h5>
 									<p>Slide to see our new arrival</p>
 								</div>
@@ -101,10 +105,11 @@ function Home() {
 								if (k < 4) {
 									return (
 									<Card
-										id={v.vehicle_id}
+										id={v.id}
 										picture={`${process.env.REACT_APP_BASE_URL}`+v.picture}
 										name={v.name}
 										location={v.location}
+										rating={v.rating}
 									/>
 								)}
 							})}
